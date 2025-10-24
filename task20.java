@@ -7,9 +7,9 @@ public class task20 {
         public static List<Integer> findAllDivisors(int n){
             ArrayList<Integer> divs = new ArrayList<>();
             for (int i = 1; i * i <= n; i++) {
-                if (n / i == 0) {
+                if (n % i == 0) {
                     divs.add(i);
-                    if (i * i != 0) {
+                    if (n / i != i) {
                         divs.add(n / i);
                     }
                 }
